@@ -2,15 +2,13 @@
   <form @submit.prevent>
     <h4>Создание поста</h4>
     <input
-      v-bind:value="title"
-      @input="title = $event.target.value"
+      v-model="post.title"
       class="input"
       type="text"
       placeholder="Название"
     />
     <input
-      v-bind:value="body"
-      @input="body = $event.target.value"
+      v-model="post.body"
       class="input"
       type="text"
       placeholder="Описание"
@@ -21,11 +19,29 @@
 
 <script>
 export default {
-  
+  data() {
+    return {
+      post: {
+        title: "",
+        body: ""
+      }
+    }
+  },
+  methods: {
+    createPost() {
+      this.post.id = Date.now();
+      // чтобы сгенерировать событие, на которое родительский компонент может подписаться, есть специальная функция
+      this.$emit("create", this.post);
+      this.post = {
+        title: "",
+        body: ""
+      }
+    }
+  }
 };
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 form {
   display: flex;
   flex-direction: column;
