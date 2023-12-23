@@ -1,22 +1,18 @@
 <template>
   <div class="app">
-    <post-form
-      @create="createPost"
-    />
-    <post-list
-      :posts="posts"
-    />
+    <post-form @create="createPost" />
+    <post-list :posts="posts" />
   </div>
 </template>
 
 <script>
-import PostForm from '@/components/PostForm';
-import PostList from '@/components/PostList';
+import PostForm from "@/components/PostForm";
+import PostList from "@/components/PostList";
 
 export default {
   components: {
     PostForm,
-    PostList
+    PostList,
   },
   data() {
     return {
