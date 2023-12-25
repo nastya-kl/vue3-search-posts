@@ -1,7 +1,8 @@
 <template>
   <form @submit.prevent>
-    <h4>Создание поста</h4>
+    <h4 style="color: rgb(54, 46, 37);">Создание поста</h4>
     <my-input
+      v-focus
       v-model="post.title"
       type="text"
       placeholder="Название"
@@ -14,6 +15,7 @@
     <my-button
       style="align-self: flex-end; margin-top: 15px;"
       @click="createPost"
+      :disabled="isButtonDisabled"
     >
       Создать
     </my-button>
@@ -29,6 +31,11 @@ export default {
         body: "",
       },
     };
+  },
+  computed: {
+    isButtonDisabled() {
+      return !(this.post.title.trim() && this.post.body.trim());
+    },
   },
   methods: {
     createPost() {

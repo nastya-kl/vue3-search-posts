@@ -1,5 +1,5 @@
 <template>
-  <select :value="modelValue" @change="changeOptions">
+  <select :value="modelValue" @change="changeOptions" class="dropdown">
     <option 
       disabled 
       value=""
@@ -36,4 +36,13 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.dropdown {
+  border: 1px solid rgb(43, 37, 27);
+  border-radius: 4px;
+  background: rgb(253, 250, 246);
+}
+.dropdown:focus {
+  border: 2px solid rgb(43, 37, 27);
+}
+</style>
