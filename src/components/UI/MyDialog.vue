@@ -27,9 +27,9 @@ export default {
 }
 
 .dialog__content {
+  background: rgb(255, 247, 238);
   margin: auto;
   padding: 20px;
-  background: white;
   border-radius: 12px;
   min-height: 50px;
   min-width: 300px;

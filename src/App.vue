@@ -18,7 +18,12 @@ export default {
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  background-color: rgb(255, 247, 238);
+}
 .app {
   padding: 20px;
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Страница с постами</h1>
+    <h1 style="color: rgb(54, 46, 37);">Страница с постами</h1>
     <my-input v-focus v-model="searchQuery" placeholder="Поиск" />
     <div class="app__btns">
       <my-button @click="showDialoge"> Создать пост </my-button>
@@ -50,7 +50,7 @@ export default {
   },
   methods: {
     createPost(post) {
-      this.posts.push(post);
+      this.posts.unshift(post);
       this.dialogVisible = false;
     },
     removePost(post) {
