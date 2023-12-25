@@ -1,19 +1,21 @@
-# vue3-search-posts
+# Приложение для поиска и создания постов
 
-## Project setup
-```
-npm install
-```
+## О сайте:
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Проект выполнен в рамках обучения Vue3 на канале Ulbi TV. В нём реализован поиск, добавление и удаление постов, переход по страницам через навигационное меню.
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Ссылка на материал: [Тык](https://www.youtube.com/watch?v=XzLuMtDelGk&ab_channel=UlbiTV)
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Стек технологий:
+
+- HTML
+- CSS
+- JS
+- Vue 3
+- Vuex
+- Axios
+
+## Установка и запуск проекта
+1. Клонируйте репозиторий с помощью команды `git clone https://github.com/nastya-kl/vue3-search-posts.git`
+2. Установите зависимости с помощью команды `npm i`
+3. Запустите проект с помощью команды `npm run serve`
